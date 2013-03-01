@@ -1,0 +1,5 @@
+include README.rst
+recursive-include cmsplugin_vimeo_gallery/fixtures *
+recursive-include cmsplugin_vimeo_gallery/locale *.po
+recursive-include cmsplugin_vimeo_gallery/static *
+recursive-include cmsplugin_vimeo_gallery/templates *
