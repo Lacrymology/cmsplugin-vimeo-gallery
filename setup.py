@@ -11,7 +11,6 @@ setup(
     description = 'DjangoCMS vimeo embedded video gallery plugin with '
                   'drag&drop reordering in admin',
     packages=find_packages(),
-    provides=['cmsplugin-vimeo-gallery', ],
     include_package_data=True,
     install_requires = [
         ],
