@@ -17,7 +17,6 @@ from cms.models import CMSPlugin
 
 from cmsplugin_vimeo_gallery import utils
 from cmsplugin_vimeo_gallery import api
-from cmsplugin_vimeo_gallery.fields import ColorField
 
 localdata = threading.local()
 localdata.TEMPLATE_CHOICES = utils.autodiscover_templates()
@@ -40,27 +39,6 @@ class VimeoVideo(models.Model):
                                         editable=False)
     thumbnail_small = models.CharField(_("thumbnail small"), max_length=128,
                                        editable=False)
-
-    # width = models.PositiveSmallIntegerField(_("width"), default=240)
-    # height = models.PositiveSmallIntegerField(_("height"), default=135)
-    # title = models.BooleanField(_("title"), default=True,
-    #                             help_text=_("Show the title on the video"))
-    # byline = models.BooleanField(_("byline"), default=True,
-    #                              help_text=_("Show the user's byline on the "
-    #                                          "video"))
-    # portrait = models.BooleanField(_("portrait"), default=True,
-    #                                help_text=_("Show the user's portrait on "
-    #                                            "the video"))
-    # color = ColorField(_("color"), default="00adef",
-    #                    help_text=_("Specify the color of the video controls"))
-    # autoplay = models.BooleanField(_("autoplay"), default=False,
-    #                                help_text=_("Play the video automatically "
-    #                                            "on load. This won't work on "
-    #                                            "some devices"))
-    # loop = models.BooleanField(_("loop"), default=False,
-    #                            help_text=_("Play the video again when it "
-    #                                        "reaches the end"))
-
 
     class Meta:
         verbose_name = _('vimeo video')
@@ -120,26 +98,3 @@ class VideoGalleryPlugin(CMSPlugin):
 
     def __unicode__(self):
         return u"{} ({})".format(self.name, self.videos.count())
-
-
-
-    # width = models.PositiveSmallIntegerField(_("width"), default=240)
-    # height = models.PositiveSmallIntegerField(_("height"), default=135)
-    # title = models.BooleanField(_("title"), default=True,
-    #                             help_text=_("Show the title on the video"))
-    # byline = models.BooleanField(_("byline"), default=True,
-    #                              help_text=_("Show the user's byline on the "
-    #                                          "video"))
-    # portrait = models.BooleanField(_("portrait"), default=True,
-    #                                help_text=_("Show the user's portrait on "
-    #                                            "the video"))
-    # color = ColorField(_("color"), default="00adef",
-    #                    help_text=_("Specify the color of the video controls"))
-    # autoplay = models.BooleanField(_("autoplay"), default=False,
-    #                                help_text=_("Play the video automatically "
-    #                                            "on load. This won't work on "
-    #                                            "some devices"))
-    # loop = models.BooleanField(_("loop"), default=False,
-    #                            help_text=_("Play the video again when it "
-    #                                        "reaches the end"))
-    #
