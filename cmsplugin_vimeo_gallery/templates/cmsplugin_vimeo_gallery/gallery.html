@@ -1,0 +1,5 @@
+<ul class="vimeoGallery" id="{{ gallery.id }}">
+{% for video in videos %}
+    <li><a href="{{ video.url }}">{{ video.title }}<img src="{{ video.thumbnail_small }}" alt="{{ video.title }}"/>{{ video.description }}</a></li>
+{% endfor %}
+</ul>
