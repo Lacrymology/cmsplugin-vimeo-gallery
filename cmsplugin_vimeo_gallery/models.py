@@ -43,6 +43,7 @@ class VimeoVideo(models.Model):
     class Meta:
         verbose_name = _('vimeo video')
         verbose_name_plural = _('vimeo videos')
+        ordering = ['-id']
 
     def save(self, *args, **kwargs):
         if not (self.id or self.url):
